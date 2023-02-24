@@ -388,6 +388,7 @@ if(MI_BUILD_SHARED)
 
   install(TARGETS mimalloc EXPORT mimalloc DESTINATION ${mi_install_libdir} LIBRARY)
   install(EXPORT mimalloc DESTINATION ${mi_install_cmakedir})
+  install(FILES $<TARGET_PDB_FILE:mimalloc> DESTINATION ${mi_install_libdir} OPTIONAL)  
 endif()
 
 # static library
